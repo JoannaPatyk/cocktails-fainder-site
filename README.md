@@ -8,6 +8,6 @@ In order to run webpage you need HTTP sever which serve the site, for example Li
 
 ## Built With
 
-* HTML,
-* CSS,
-* JavaScript.
+-   HTML,
+-   CSS,
+-   JavaScript.

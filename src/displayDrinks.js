@@ -1,17 +1,17 @@
-import get from "./getElement.js";
+import get from './getElement.js';
 
 const displayDrinks = ({ drinks }) => {
-  const section = get(".section-center");
-  const title = get(".title");
-  if (!drinks) {
-    title.textContent = "sorry, no drinks matched your search 🥲";
-    section.innerHTML = null;
-    return;
-  }
-  const newDrinks = drinks
-    .map((drink) => {
-      const { idDrink: id, strDrink: name, strDrinkThumb: image } = drink;
-      return `
+    const section = get('.section-center');
+    const title = get('.title');
+    if (!drinks) {
+        title.textContent = 'sorry, no drinks matched your search 🥲';
+        section.innerHTML = null;
+        return;
+    }
+    const newDrinks = drinks
+        .map((drink) => {
+            const { idDrink: id, strDrink: name, strDrinkThumb: image } = drink;
+            return `
     <a href="drink.html">
     <article class="cocktail" data-id="${id}">
       <img src="${image}" alt="${name}" />
@@ -19,11 +19,11 @@ const displayDrinks = ({ drinks }) => {
     </article>
   </a>
     `;
-    })
-    .join("");
-  title.textContent = "";
-  section.innerHTML = newDrinks;
-  return section;
+        })
+        .join('');
+    title.textContent = '';
+    section.innerHTML = newDrinks;
+    return section;
 };
 
 export default displayDrinks;
