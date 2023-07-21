@@ -5,21 +5,105 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cocktails</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
         <link rel="stylesheet" href="./styles.css" />
     </head>
 
     <body>
-        <form class="search-form">
-            <h2>🍹cocktails finder🍹</h2>
-            <input type="text" placeholder="Search your cocktail ..." name="drink" />
-        </form>
-        <section class="section cocktails">
-            <article class="loading hide-loading">
-                <img src="./loading.gif" alt="loading" />
-            </article>
-            <h2 class="title"></h2>
-            <div class="section-center"></div>
+        <section class="section-logo">
+            <h1>Cocktails</h1>
+            <strong>finder</strong>
         </section>
+        <section class="section-menu">
+            <nav class="menu">
+                <a class="about" href="#">about</a>
+                <a class="portfolio" href="#">search</a>
+                <a class="contact" href="#">contact</a>
+            </nav>
+        </section>
+        <section class="section-description">
+            <img src="img/cocktail.png" class="cocktail-img" alt="cocktail" />
+            <div>
+                <p>
+                    Welcome to our website, where you can easily search your <strong>favorite drinks</strong> discover a
+                    wide selection of cocktails with easy recipes and create your perfect drink...
+                </p>
+                <strong>Cheers to a delightful journey of mixology!</strong>
+            </div>
+        </section>
+
+        <section class="section-about" id="about">
+            <div class="about-text">
+                <h4>
+                    Cocktails Finder is an application that allows users to <strong>easily search</strong> for a variety
+                    of cocktails. The app provides a compilation of popular and classic cocktail recipes.
+                </h4>
+                <h4>
+                    The main feature of Cocktails Finder is advanced cocktail search.
+                    <strong>You can enter the name of a specific cocktail</strong>, the app presents the results, each
+                    cocktail is described along with a list of ingredients and instructions.
+                </h4>
+            </div>
+            <img src="img/drinks.png" class="about-img" alt="" />
+        </section>
+
+        <section class="section-cocktails" id="search">
+            <h3>Search for your favorite cocktail...</h1>
+            <form class="search-form">
+                <input type="text" placeholder="enter cocktail name" name="drink" />
+            </form>
+            <div class="cocktails">
+                <article class="loading">
+                    <img src="img/loading.gif" alt="loading" />
+                </article>
+                <h2 class="title"></h2>
+                <div class="section-center"></div>
+            </div>
+        </section>
+
+        <section class="section-contact">
+            <div class="contact-wrapper">
+                
+                <form class="contact-form">
+                    <h3>Have any questions?</h3>
+                    <h3>We are waiting for your message!</h3>
+                    <input type="text" placeholder="name" />
+                    <input type="email" placeholder="e-mail" />
+                    <textarea placeholder="message"></textarea>
+                    <button class="btn" type="submit">send</button>
+                </form>
+
+                <div class="contact-details">
+                    <div class="phone">
+                        <span class="material-symbols-outlined">call</span>
+                        <h3>Phone</h3>
+                        <p>(+48) 111 111 111</p>
+                        <p>(+48) 999 999 999</p>
+                    </div>
+
+                    <div class="address">
+                        <span class="material-symbols-outlined"> home_pin </span>
+                        <h3>Address</h3>
+                        <p>Main Street 10</p>
+                        <p>Big City 1045</p>
+                    </div>
+
+                    <div class="email">
+                        <span class="material-symbols-outlined"> mail </span>
+                        <h3>Email</h3>
+                        <p>e@gmail.com</p>
+                        <p>e2@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <img src="img/lights.png" class="background-img" alt="" />
+        <footer>Copyright © 2023 Joanna Patyk | All Rights Reserved</footer>
+
         <script type="module" src="./app.js"></script>
     </body>
 </html>

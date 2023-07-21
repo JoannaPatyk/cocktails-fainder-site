@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 :root {
-    --clr-primary-1: #f64a3e;
-    --clr-primary-2: #fc574b;
-    --clr-primary-3: #fc675d;
-    --clr-primary-4: #fa7f76;
-    --clr-primary-5: #faa49e;
+    --clr-primary-1: #7eae36;
+    --clr-primary-2: #98be5e;
+    --clr-primary-3: #b2ce86;
+    --clr-primary-4: #d8e7c3;
+    --clr-primary-5: #ecf5ec;
+
+    --clr-secondary-1: #f6d05a;
+    --clr-secondary-2: #f9de8c;
+    --clr-secondary-3: #fbe8ad;
+    --clr-secondary-4: #fdf6de;
+    --clr-secondary-5: #fef9eb;
+
     --clr-grey-1: #1c2c54;
     --clr-grey-2: #273864;
     --clr-grey-3: #526696;
@@ -13,7 +21,8 @@
     --clr-white: #fff;
     --clr-black: #222;
 
-    --ff-primary: 'Nunito', sans-serif;
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Dancing Script', cursive;
 
     --transition: all 0.3s linear;
     --spacing: 0.25rem;
@@ -32,14 +41,15 @@
 
 body {
     line-height: 1.5;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-family: var(--ff-primary);
-    background: var(--clr-grey-1);
+    background: var(--clr-black);
     color: var(--clr-primary-1);
 }
 
 a {
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 h1,
@@ -47,8 +57,6 @@ h2,
 h3,
 h4 {
     font-family: var(--ff-primary);
-    letter-spacing: var(--spacing);
-    text-transform: uppercase;
     line-height: 1.25;
     margin-bottom: 0.75rem;
 }
@@ -59,6 +67,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -70,7 +79,6 @@ h4 {
 }
 
 p {
-    margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
 }
 
@@ -102,35 +110,122 @@ p {
     }
 }
 
-.btn {
-    display: block;
-    padding: 0.375rem 0.75rem;
-    font-size: 0.875rem;
+/*LOGO SECTIONS*/
+
+.section-logo {
+    height: 13vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.section-logo h1 {
+    font-size: 8rem;
+    font-family: var(--ff-secondary);
+    text-transform: none;
+    color: var(--clr-secondary-1);
+    text-shadow: 1px 1px 10px var(--clr-primary-1);
+}
+
+.section-logo strong {
+    position: absolute;
+    right: 40%;
+    bottom: -8%;
+    font-size: 2rem;
+    color: var(--clr-primary-1);
+    text-shadow: 1px 1px 5px var(--clr-primary-1);
     text-transform: uppercase;
-    color: var(--clr-white);
-    letter-spacing: var(--spacing);
-    background: var(--clr-primary-5);
-    border: 2px solid var(--clr-primary-5);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: var(--radius);
-    transition: var(--transition);
+    letter-spacing: 0.4rem;
+}
+
+.menu {
+    height: 7vh;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.menu a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    color: var(--clr-primary-2);
+    border: 2px solid transparent;
+    transition: 0.5s;
     cursor: pointer;
 }
 
-.btn:hover {
-    color: var(--clr-primary-5);
-    background: var(--clr-primary-1);
-    border-color: var(--clr-primary-1);
+.menu a:hover {
+    color: var(--clr-secondary-2);
+    border: 2px solid var(--clr-secondary-2);
+    box-shadow: 1px 1px 10px var(--clr-primary-1);
 }
 
-.section {
-    padding: 5rem 0;
+.section-description {
+    height: calc(80vh - 5rem);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-description div {
+    width: 80%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: left;
+    letter-spacing: 0.05rem;
+}
+
+.section-description div p {
+    margin: -2rem 0 1rem;
+}
+
+strong {
+    color: var(--clr-secondary-2);
+    font-size: 3rem;
+}
+
+.cocktail-img {
+    width: 80%;
+}
+
+/* SECTION ABOUT */
+
+.section-about {
+    height: 100vh;
+    max-width: 1440px;
+    margin: 15rem auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-about h4 {
+    font-weight: 200;
+    font-size: 1.8rem;
+    line-height: 40px;
+    padding: 1rem;
+}
+
+.about-img {
+    width: 50%;
+}
+
+/* SECTION COCKTAILS */
+
+.section-cocktails h3 {
+    text-align: center;
+    font-weight: 300;
 }
 
 .section-center {
     width: 85vw;
-    max-width: 1170px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 3rem 0;
 }
 
 @media screen and (min-width: 576px) {
@@ -168,7 +263,7 @@ p {
 .search-form {
     width: 85vw;
     max-width: 800px;
-    margin: 0 auto;
+    margin: -2rem auto 0;
     padding-top: 5rem;
     text-align: center;
 }
@@ -177,13 +272,9 @@ p {
     letter-spacing: 0.5rem;
 }
 
-.search-form h2 .icon {
-    font-size: 3rem;
-}
-
-input {
+input,
+textarea {
     width: 100%;
-    margin-top: 2rem;
     padding: 0.75rem 1rem;
     font-size: 1.2rem;
     font-family: inherit;
@@ -217,7 +308,6 @@ input:hover {
     position: relative;
     margin-bottom: 3rem;
     background: var(--clr-white);
-    border-radius: var(--radius);
     box-shadow: var(--light-shadow);
     transition: var(--transition);
 }
@@ -229,13 +319,13 @@ input:hover {
 
 .cocktail img {
     width: 100%;
-    height: 268px;
+    height: 250px;
     display: block;
-    border-radius: var(--radius);
-    border: 4px solid var(--clr-primary-1);
     transition: var(--transition);
+    box-shadow: 0 0 10px var(--clr-primary-4);
     object-fit: cover;
 }
+
 .cocktail:hover img {
     filter: blur(1px) grayscale(50%);
 }
@@ -255,15 +345,46 @@ input:hover {
     border-radius: var(--radius);
 }
 
+/* SINGLE DRINK */
+
+.btn {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    letter-spacing: var(--spacing);
+    background: var(--clr-primary-1);
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+    background: var(--clr-secondary-2);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .single-drink {
-    width: 85vw;
-    max-width: var(--max-width);
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max- width);
     margin: 0 auto;
-    margin-top: 4rem;
 }
 
 .drink-img {
-    width: 100%;
+    width: 70%;
     height: 400px;
     display: block;
     border: 10px solid var(--clr-white);
@@ -280,7 +401,11 @@ input:hover {
 }
 
 .drink-info {
-    padding-top: 2rem;
+    padding-top: 1rem;
+}
+
+.drink-ingredients {
+    list-style-type: none;
 }
 
 .drink-ingredients .far {
@@ -290,4 +415,72 @@ input:hover {
 .single-drink .btn {
     display: inline-block;
     margin-top: 2rem;
+}
+
+/* SECTION CONTACT */
+
+.section-contact {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-contact input,
+.section-contact textarea {
+    margin: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form .btn {
+    width: 50%;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 4rem 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+}
+
+.contact-form h3,
+.contact-details h3 {
+    font-weight: 500;
+}
+
+.material-symbols-outlined {
+    font-size: 5rem;
+}
+
+/* FOOTER */
+
+.background-img {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+footer {
+    height: --clr-secondary-4;
+    width: 100%;
+    color: var(--clr-black);
+    text-align: center;
+    line-height: 4vh;
+    background-color: var(--clr-secondary-2);
 }
