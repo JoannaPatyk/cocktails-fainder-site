@@ -11,19 +11,35 @@
         />
         <link rel="stylesheet" href="./styles.css" />
     </head>
-
     <body>
+        <!-- section-logo -->
+
         <section class="section-logo">
             <h1>Cocktails</h1>
             <strong>finder</strong>
+
+            <a href="https://www.facebook.com/">
+                <img src="img/facebook-1834007_1920.png" class="fb-logo" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="img/instagram-1834010_1920.png" class="instagram-logo" alt="instagram" />
+            </a>
         </section>
+
+        <span class="material-symbols-outlined scroll-icon"> arrow_circle_up </span>
+
+        <!-- section-menu -->
+
         <section class="section-menu">
             <nav class="menu">
                 <a class="about" href="#">about</a>
-                <a class="portfolio" href="#">search</a>
+                <a class="search" href="#">search</a>
                 <a class="contact" href="#">contact</a>
             </nav>
         </section>
+
+        <!-- section-description -->
+
         <section class="section-description">
             <img src="img/cocktail.png" class="cocktail-img" alt="cocktail" />
             <div>
@@ -34,6 +50,8 @@
                 <strong>Cheers to a delightful journey of mixology!</strong>
             </div>
         </section>
+
+        <!-- section-about -->
 
         <section class="section-about" id="about">
             <div class="about-text">
@@ -50,8 +68,10 @@
             <img src="img/drinks.png" class="about-img" alt="" />
         </section>
 
+        <!-- section-cocktails -->
+
         <section class="section-cocktails" id="search">
-            <h3>Search for your favorite cocktail...</h1>
+            <h3>Search for your favorite cocktail...</h3>
             <form class="search-form">
                 <input type="text" placeholder="enter cocktail name" name="drink" />
             </form>
@@ -64,9 +84,10 @@
             </div>
         </section>
 
-        <section class="section-contact">
+        <!-- section-contact -->
+
+        <section class="section-contact" id="contact">
             <div class="contact-wrapper">
-                
                 <form class="contact-form">
                     <h3>Have any questions?</h3>
                     <h3>We are waiting for your message!</h3>
@@ -75,24 +96,21 @@
                     <textarea placeholder="message"></textarea>
                     <button class="btn" type="submit">send</button>
                 </form>
-
                 <div class="contact-details">
                     <div class="phone">
-                        <span class="material-symbols-outlined">call</span>
+                        <span class="material-symbols-outlined contact-icon">call</span>
                         <h3>Phone</h3>
                         <p>(+48) 111 111 111</p>
                         <p>(+48) 999 999 999</p>
                     </div>
-
                     <div class="address">
-                        <span class="material-symbols-outlined"> home_pin </span>
+                        <span class="material-symbols-outlined contact-icon"> home_pin </span>
                         <h3>Address</h3>
                         <p>Main Street 10</p>
                         <p>Big City 1045</p>
                     </div>
-
                     <div class="email">
-                        <span class="material-symbols-outlined"> mail </span>
+                        <span class="material-symbols-outlined contact-icon"> mail </span>
                         <h3>Email</h3>
                         <p>e@gmail.com</p>
                         <p>e2@gmail.com</p>
@@ -102,6 +120,9 @@
         </section>
 
         <img src="img/lights.png" class="background-img" alt="" />
+
+        <!-- footer -->
+
         <footer>Copyright © 2023 Joanna Patyk | All Rights Reserved</footer>
 
         <script type="module" src="./app.js"></script>

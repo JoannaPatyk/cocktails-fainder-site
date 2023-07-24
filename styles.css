@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 :root {
-    --clr-primary-1: #7eae36;
-    --clr-primary-2: #98be5e;
-    --clr-primary-3: #b2ce86;
+    --clr-primary-1: #6a9628;
+    --clr-primary-2: #91b659;
+    --clr-primary-3: #9bb474;
     --clr-primary-4: #d8e7c3;
     --clr-primary-5: #ecf5ec;
 
@@ -14,21 +14,16 @@
     --clr-secondary-4: #fdf6de;
     --clr-secondary-5: #fef9eb;
 
-    --clr-grey-1: #1c2c54;
-    --clr-grey-2: #273864;
-    --clr-grey-3: #526696;
-    --clr-grey-4: #96a3c4;
+    --clr-grey: #616f8f;
     --clr-white: #fff;
-    --clr-black: #222;
+    --clr-black: #2c2a2a;
 
     --ff-primary: 'Montserrat', sans-serif;
     --ff-secondary: 'Dancing Script', cursive;
 
-    --transition: all 0.3s linear;
+    --transition: all 0.5s linear;
     --spacing: 0.25rem;
     --radius: 5rem;
-    --max-width: 1170px;
-    --fixed-width: 620px;
 }
 
 *,
@@ -37,11 +32,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
     line-height: 1.5;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     font-family: var(--ff-primary);
     background: var(--clr-black);
     color: var(--clr-primary-1);
@@ -67,7 +64,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    text-transform: uppercase;
 }
 
 h3 {
@@ -76,10 +72,6 @@ h3 {
 
 h4 {
     font-size: 0.875rem;
-}
-
-p {
-    color: var(--clr-grey-5);
 }
 
 @media screen and (min-width: 800px) {
@@ -102,6 +94,7 @@ p {
     body {
         font-size: 1rem;
     }
+
     h1,
     h2,
     h3,
@@ -114,6 +107,7 @@ p {
 
 .section-logo {
     height: 13vh;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -123,10 +117,33 @@ p {
     margin-bottom: 2rem;
 }
 
+.fb-logo,
+.instagram-logo {
+    position: absolute;
+    top: 5%;
+    width: 5%;
+    opacity: 0.6;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.fb-logo {
+    right: 5%;
+}
+
+.instagram-logo {
+    right: 9%;
+}
+
+.fb-logo:hover,
+.instagram-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 .section-logo h1 {
     font-size: 8rem;
     font-family: var(--ff-secondary);
-    text-transform: none;
     color: var(--clr-secondary-1);
     text-shadow: 1px 1px 10px var(--clr-primary-1);
 }
@@ -134,12 +151,12 @@ p {
 .section-logo strong {
     position: absolute;
     right: 40%;
-    bottom: -8%;
+    bottom: -15%;
     font-size: 2rem;
     color: var(--clr-primary-1);
     text-shadow: 1px 1px 5px var(--clr-primary-1);
     text-transform: uppercase;
-    letter-spacing: 0.4rem;
+    letter-spacing: var(--spacing);
 }
 
 .menu {
@@ -154,13 +171,13 @@ p {
     letter-spacing: 0.1rem;
     color: var(--clr-primary-2);
     border: 2px solid transparent;
-    transition: 0.5s;
+    transition: var(--transition);
     cursor: pointer;
 }
 
 .menu a:hover {
     color: var(--clr-secondary-2);
-    border: 2px solid var(--clr-secondary-2);
+    border-color: var(--clr-secondary-2);
     box-shadow: 1px 1px 10px var(--clr-primary-1);
 }
 
@@ -176,7 +193,7 @@ p {
     font-size: 1.5rem;
     line-height: 3rem;
     text-align: left;
-    letter-spacing: 0.05rem;
+    letter-spacing: calc(var(--spacing) / 5);
 }
 
 .section-description div p {
@@ -189,7 +206,7 @@ strong {
 }
 
 .cocktail-img {
-    width: 80%;
+    width: 85%;
 }
 
 /* SECTION ABOUT */
@@ -197,35 +214,37 @@ strong {
 .section-about {
     height: 100vh;
     max-width: 1440px;
-    margin: 15rem auto 0;
+    margin: 0 15rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .section-about h4 {
-    font-weight: 200;
-    font-size: 1.8rem;
+    font-weight: 500;
+    font-size: 1.6rem;
     line-height: 40px;
     padding: 1rem;
 }
 
 .about-img {
-    width: 50%;
+    width: 55%;
 }
 
 /* SECTION COCKTAILS */
 
 .section-cocktails h3 {
+    margin-top: 1rem;
     text-align: center;
-    font-weight: 300;
+    font-weight: 500;
+    color: var(--clr-secondary-2);
 }
 
 .section-center {
-    width: 85vw;
+    width: 80vw;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 4rem 0;
 }
 
 @media screen and (min-width: 576px) {
@@ -278,17 +297,16 @@ textarea {
     padding: 0.75rem 1rem;
     font-size: 1.2rem;
     font-family: inherit;
-    letter-spacing: 0.05rem;
     border-color: transparent;
     border-radius: var(--radius);
     outline: none;
     cursor: pointer;
-    transition: 0.5s;
+    transition: var(--transition);
 }
 
 input::placeholder {
     letter-spacing: var();
-    color: var(--clr-grey-3);
+    color: var(--clr-grey);
 }
 
 input:hover {
@@ -319,10 +337,10 @@ input:hover {
 
 .cocktail img {
     width: 100%;
-    height: 250px;
+    height: 60%;
     display: block;
-    transition: var(--transition);
     box-shadow: 0 0 10px var(--clr-primary-4);
+    transition: var(--transition);
     object-fit: cover;
 }
 
@@ -336,11 +354,10 @@ input:hover {
     right: -1rem;
     padding: 1rem 1.5rem;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: var(--ff-primary);
     text-align: center;
     color: var(--clr-white);
-    text-transform: uppercase;
     background: var(--clr-primary-1);
     border-radius: var(--radius);
 }
@@ -354,7 +371,7 @@ input:hover {
     text-transform: uppercase;
     color: var(--clr-black);
     letter-spacing: var(--spacing);
-    background: var(--clr-primary-1);
+    background: var(--clr-secondary-2);
     border: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: var(--radius);
@@ -364,10 +381,10 @@ input:hover {
 
 .btn:hover {
     transform: scale(0.98);
-    background: var(--clr-secondary-2);
+    background: var(--clr-primary-1);
 }
 
-.container {
+.single-drink-container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -379,17 +396,15 @@ input:hover {
     width: 60vw;
     display: flex;
     flex-direction: column;
-    max-width: var(--max- width);
     margin: 0 auto;
 }
 
 .drink-img {
-    width: 70%;
-    height: 400px;
+    width: 80%;
+    height: 500px;
     display: block;
-    border: 10px solid var(--clr-white);
-    border-radius: var(--radius);
     object-fit: cover;
+    box-shadow: 0 0 10px var(--clr-primary-4);
 }
 
 @media screen and (min-width: 992px) {
@@ -401,15 +416,34 @@ input:hover {
 }
 
 .drink-info {
-    padding-top: 1rem;
+    padding-top: 2rem;
+}
+
+.drink-info h1 {
+    padding: 1rem 0;
+    color: var(--clr-secondary-2);
+}
+
+.drink-info p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.drink-info hr {
+    margin: 1rem 0;
+}
+
+.drink-name {
+    font-family: var(--ff-secondary);
+    text-transform: capitalize;
 }
 
 .drink-ingredients {
     list-style-type: none;
 }
 
-.drink-ingredients .far {
-    margin-right: 1rem;
+.drink-ingredients li {
+    margin: 1rem 0;
 }
 
 .single-drink .btn {
@@ -421,6 +455,7 @@ input:hover {
 
 .section-contact {
     max-width: 900px;
+    height: 95vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -440,8 +475,9 @@ input:hover {
 }
 
 .contact-form .btn {
-    width: 50%;
-    padding: 0.7rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
 }
 
@@ -450,7 +486,7 @@ input:hover {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    margin: 4rem 0;
+    margin: 5rem 0;
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
@@ -459,13 +495,23 @@ input:hover {
 .contact-form h3,
 .contact-details h3 {
     font-weight: 500;
+    color: var(--clr-secondary-2);
 }
 
-.material-symbols-outlined {
+.contact-icon {
     font-size: 5rem;
 }
 
 /* FOOTER */
+
+.scroll-icon {
+    position: fixed;
+    bottom: 6%;
+    right: 2%;
+    font-size: 3rem;
+    color: var(--clr-primary-1);
+    cursor: pointer;
+}
 
 .background-img {
     width: 100%;
@@ -477,10 +523,10 @@ input:hover {
 }
 
 footer {
-    height: --clr-secondary-4;
+    height: 5vh;
     width: 100%;
     color: var(--clr-black);
     text-align: center;
-    line-height: 4vh;
+    line-height: 5vh;
     background-color: var(--clr-secondary-2);
 }
