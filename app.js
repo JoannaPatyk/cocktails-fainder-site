@@ -15,7 +15,7 @@ document.querySelectorAll('.menu a').forEach(function (element) {
         const goToSectionElement = getElement(`#${element.getAttribute('class')}`);
         if (goToSectionElement) {
             window.scroll({
-                top: goToSectionElement.getBoundingClientRect().top,
+                top: goToSectionElement.getBoundingClientRect().top - 40,
                 behavior: 'smooth'
             });
         }
@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
 });
 
 function scrollFunction() {
-    const scrollPosition = window.pageYOffset;
+    const scrollPosition = window.scrollY;
     element.style.display = scrollPosition > 100 ? 'block' : 'none';
 }
 

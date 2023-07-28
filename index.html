@@ -32,7 +32,7 @@
 
         <section class="section-menu">
             <nav class="menu">
-                <a class="about" href="#">about</a>
+                <a class="about" href="#">about us</a>
                 <a class="search" href="#">search</a>
                 <a class="contact" href="#">contact</a>
             </nav>
@@ -71,7 +71,7 @@
         <!-- section-cocktails -->
 
         <section class="section-cocktails" id="search">
-            <h3>Search for your favorite cocktail...</h3>
+            <h4><strong>find your cocktail</strong></h4>
             <form class="search-form">
                 <input type="text" placeholder="enter cocktail name" name="drink" />
             </form>
@@ -89,30 +89,13 @@
         <section class="section-contact" id="contact">
             <div class="contact-wrapper">
                 <form class="contact-form">
-                    <h3>Have any questions?</h3>
+                    <h3><strong>Have any questions?</strong></h3>
                     <h3>We are waiting for your message!</h3>
                     <input type="text" placeholder="name" />
                     <input type="email" placeholder="e-mail" />
                     <textarea placeholder="message"></textarea>
                     <button class="btn" type="submit">send</button>
                 </form>
-                <div class="contact-details">
-                    <div class="phone">
-                        <span class="material-symbols-outlined contact-icon">call</span>
-                        <p>(+48) 000 000 000</p>
-                        <p>(+48) 000 000 000</p>
-                    </div>
-                    <div class="address">
-                        <span class="material-symbols-outlined contact-icon"> home_pin </span>
-                        <p>Main Street 10/2</p>
-                        <p>Big City 1045-212</p>
-                    </div>
-                    <div class="email">
-                        <span class="material-symbols-outlined contact-icon"> mail </span>
-                        <p>support@gmail.com</p>
-                        <p>support@gmail.com</p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -120,7 +103,41 @@
 
         <!-- footer -->
 
-        <footer>Copyright © 2023 Joanna Patyk | All Rights Reserved</footer>
+        <footer>
+            <div class="contact-details">
+                <nav class="footer-menu">
+                    <a class="about" href="#">about us</a>
+                    <a class="search" href="#">search</a>
+                    <a class="contact" href="#">contact</a>
+                </nav>
+
+                <div class="adres-1">
+                    <span class="material-symbols-outlined home-icon"> home_pin </span>
+                    <div>
+                        <h4>Support address:</h4>
+                        <p>Main Street 10/2</p>
+                        <p>Big City 1045-212</p>
+                        <p>(+48) 000 000 000</p>
+                        <p>support@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="adres-2">
+                    <span class="material-symbols-outlined home-icon"> home_pin </span>
+                    <div>
+                        <h4>Sale address:</h4>
+                        <p>Main Street 9/18</p>
+                        <p>Small City 1045-212</p>
+                        <p>(+48) 888 888 888</p>
+                        <p>sale@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <img src="img/cup.png" class="cup-img" alt="" />
+
+            <p>Copyright © 2023 Joanna Patyk | All Rights Reserved</p>
+        </footer>
 
         <script type="module" src="./app.js"></script>
     </body>

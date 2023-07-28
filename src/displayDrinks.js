@@ -11,7 +11,7 @@ const displayDrinks = ({ drinks }) => {
         section.innerHTML = null;
         return;
     }
-    const showDrinks = drinks.slice(0, 12);
+    const showDrinks = drinks.slice(0, 8);
 
     const newDrinks = showDrinks
         .map((drink) => {
